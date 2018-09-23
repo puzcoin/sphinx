@@ -108,7 +108,7 @@ public:
         pchMessageStart[2] = 0x1c;              
         pchMessageStart[3] = 0xe5;
         vAlertPubKey = ParseHex("04cc24ab003c828cdd9cf4db2ebbde8esdfsdfsdsdfsdfsfsdfsdf1cecb3bbfa8b3127fcb9dd9b84d44112080827ed7c49a648af9fe788ff42e316aee665879c553f099e55299d6b54edd7e0");
-        nDefaultPort = 39999;                   
+        nDefaultPort = 23432;                   
         bnProofOfWorkLimit  = (~uint256(0) >> 16);
         bnProofOfStakeLimit = (~uint256(0) >> 20); 
         nSubsidyHalvingInterval = 210000;       // Halving interval
@@ -182,10 +182,7 @@ public:
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x77).convert_to_container<std::vector<unsigned char> >(); // (**TODO**)
 
         //convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
-	vSeeds.push_back(CDNSSeedData("s1", "s1.sphinx-coin.com"));
-        vSeeds.push_back(CDNSSeedData("s2", "s2.sphinx-coin.com"));
-        vSeeds.push_back(CDNSSeedData("s3", "s3.sphinx-coin.com"));
-	vSeeds.push_back(CDNSSeedData("m1", "m1.sphinx-coin.com"));
+	vSeeds.push_back(CDNSSeedData("s1", "45.249.244.140"));
 
 
         fMiningRequiresPeers = true;
@@ -240,7 +237,7 @@ public:
         pchMessageStart[2] = 0xfc;
         pchMessageStart[3] = 0x69;
         vAlertPubKey = ParseHex("0432f3e3c6c8ce236579b3223debc2b684f0ffa14fd3fe6813eafe3f3dd3b45664d1efbdfe43441edc83d1c4507ab9bd395c8134797e04457965031a4b6413bb1a");
-        nDefaultPort = 27170;
+        nDefaultPort = 23732;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
@@ -366,7 +363,7 @@ public:
         genesis.nNonce = 0x496f6e;                // hex 57 47 52 in text = SPHX
 
         hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 17270;
+        nDefaultPort = 23632;
         assert(hashGenesisBlock == uint256("0xe6f63a91cd05b42f94ba60e359d5c9d62faf9c9733d9b523a343281e1c267d46"));
 
         vFixedSeeds.clear();                    //! Testnet mode doesn't have any fixed seeds.
